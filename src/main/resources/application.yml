@@ -1,0 +1,18 @@
+server:
+  port: 8081
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/contacts
+    username: postgres
+    password: postgres
+    hikari:
+      schema: contacts_schema
+  liquibase:
+    change-log: classpath:db/changelog/changelog-master.yml
+    enabled: true
+    drop-first: false
+    default-schema: contacts_schema
+    contexts: dev
+logging:
+  level:
+    root: INFO

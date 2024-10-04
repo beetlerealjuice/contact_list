@@ -1,0 +1,8 @@
+databaseChangeLog:
+  - changeSet:
+      id: 1
+      author: Sergey Shagaev
+      context: init
+      changes:
+        - sqlFile:
+            path: db/migrations/V1__init.sql
